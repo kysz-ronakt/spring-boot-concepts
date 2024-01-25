@@ -1,10 +1,10 @@
 package dev.ronak.multipledatastoredemo;
 
-import dev.ronak.multipledatastoredemo.post.Post;
-import dev.ronak.multipledatastoredemo.post.PostService;
+import dev.ronak.multipledatastoredemo.multitenantDB.post.Post;
+import dev.ronak.multipledatastoredemo.multitenantDB.post.PostService;
 import dev.ronak.multipledatastoredemo.restClient.RestService;
-import dev.ronak.multipledatastoredemo.subscriber.Subscriber;
-import dev.ronak.multipledatastoredemo.subscriber.SubscriberService;
+import dev.ronak.multipledatastoredemo.multitenantDB.post.subscriber.Subscriber;
+import dev.ronak.multipledatastoredemo.multitenantDB.post.subscriber.SubscriberService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -38,8 +38,8 @@ public class MultipleDatastoreDemoApplication {
     CommandLineRunner dsCommandLineRunner(@Qualifier("blogDataSource") DataSource blogDataSource, @Qualifier("subscriberDataSource") DataSource subscriberDataSource) {
         return args -> {
             // both print out jdbc:h2:mem:blog
-            System.out.println(blogDataSource.getConnection().getMetaData().getURL());
-            System.out.println(subscriberDataSource.getConnection().getMetaData().getURL());
+//            System.out.println(blogDataSource.getConnection().getMetaData().getURL());
+//            System.out.println(subscriberDataSource.getConnection().getMetaData().getURL());
         };
     }
 
@@ -58,7 +58,7 @@ public class MultipleDatastoreDemoApplication {
         return service ->{
 
             String users = restService.findAll();
-            System.out.println("users = " + users);
+//            System.out.println("users = " + users);
         };
     }
 

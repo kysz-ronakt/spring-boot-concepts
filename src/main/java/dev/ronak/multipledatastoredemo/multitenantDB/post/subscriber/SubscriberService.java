@@ -1,4 +1,4 @@
-package dev.ronak.multipledatastoredemo.subscriber;
+package dev.ronak.multipledatastoredemo.multitenantDB.post.subscriber;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.simple.JdbcClient;

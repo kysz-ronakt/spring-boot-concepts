@@ -1,4 +1,4 @@
-package dev.ronak.multipledatastoredemo.post;
+package dev.ronak.multipledatastoredemo.multitenantDB.post;
 
 import java.time.LocalDate;
 

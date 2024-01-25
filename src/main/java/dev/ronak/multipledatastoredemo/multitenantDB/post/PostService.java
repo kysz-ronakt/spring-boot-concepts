@@ -1,6 +1,5 @@
-package dev.ronak.multipledatastoredemo.post;
+package dev.ronak.multipledatastoredemo.multitenantDB.post;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.stereotype.Service;
