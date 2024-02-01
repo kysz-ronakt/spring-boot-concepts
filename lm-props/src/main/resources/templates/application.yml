@@ -1,0 +1,19 @@
+social:
+  media:
+    accounts:
+      -   name: Twitter
+          url: https://twitter.com/r0n4k
+          username: r0n4k
+      -   name: Facebook
+          url: https://facebook.com/fb_r0n4k
+          username: fb_r0n4k
+      -   name: GitHub
+          url: https://github.com/git_r0n4k
+          username: git_r0n4k
+
+bookmarks:
+  websites:
+    dan-vega: https://www.danvega.dev
+    spring-academy: https://spring.academy
+    spring-io: https://spring.io
+    spring-one: https://springone.io
