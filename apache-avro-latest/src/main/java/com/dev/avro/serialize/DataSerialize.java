@@ -51,4 +51,27 @@ public class DataSerialize {
     }
 
 
+    public static void checkReflection() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+
+
+        Employee emp = new Employee();
+
+        System.out.println(emp.getClass().getName());
+        System.out.println(Class.forName(emp.getClass().getName()));
+        System.out.println(emp.getClass().newInstance());
+        System.out.println(emp.getClass().isInterface());
+
+
+
+    }
+
+    public static void main(String[] args) {
+
+        try {
+            checkReflection();
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
