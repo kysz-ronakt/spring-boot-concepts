@@ -1,0 +1,15 @@
+{
+  "type" : "record",
+  "name" : "Department",
+  "namespace" : "com.dev.avro.model",
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", {
+      "type" : "long",
+      "java-class" : "java.lang.Long"
+    } ]
+  }, {
+    "name" : "setName",
+    "type" : [ "null", "string" ]
+  } ]
+}

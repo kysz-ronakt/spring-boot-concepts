@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "Employee",
+  "namespace" : "com.dev.avro.model",
+
+  "fields" : [ {
+    "name" : "id",
+    "type" : [ "null", {
+      "type" : "long",
+      "java-class" : "java.lang.Long"
+    } ]
+  }, {
+    "name" : "firstName",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "lastName",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "department",
+    "type" : [ "null", "string" ]
+  } ]
+}
