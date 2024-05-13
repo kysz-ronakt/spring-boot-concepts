@@ -18,20 +18,21 @@ public class FirstAndLastPositionInArray {
     public static void main(String[] args) {
 
 //        int[] arr = {1,2,3,4,5,6,7,8,9};
-        int[] arr = {5, 7, 7, 7, 7, 8, 8, 10};
-        int target = 7; //start position = 5, end position = 7
+        int[] arr = {5, 7, 7, 8, 8, 10};
+        int target = 6; //start position = 5, end position = 7
 
-        int[] firstAndLastPositionInArray = getFirstAndLastPositionInArray(arr, target);
+        int[] firstAndLastPositionInArray = searchRange(arr, target);
         System.out.println("firstAndLastPositionInArray = " + Arrays.toString(firstAndLastPositionInArray));
     }
 
 
-    private static int[] getFirstAndLastPositionInArray(int[] arr, int target) {
+    public static int[] searchRange(int[] nums, int target) {
+
 
         int[] answer = {-1, -1};
 
-        int start = search(arr, target, true);
-        int end = search(arr, target, false);
+        int start = search(nums, target, true);
+        int end = search(nums, target, false);
 
         answer[0] = start;
         answer[1] = end;
