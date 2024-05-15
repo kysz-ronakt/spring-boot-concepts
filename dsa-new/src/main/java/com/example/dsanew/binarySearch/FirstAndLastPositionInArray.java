@@ -2,7 +2,7 @@ package com.example.dsanew.binarySearch;
 
 import java.util.Arrays;
 
-//find the first and last element in array for the sorted array
+//find the first and last element in array for the sorted array for the given target
 public class FirstAndLastPositionInArray {
 
     //    steps:
