@@ -1,5 +1,7 @@
 package com.example.dsanew.binarySearch;
 
+import java.util.stream.IntStream;
+
 public class SearchInMountain {
 
     /*
@@ -10,7 +12,7 @@ public class SearchInMountain {
      * LC = 1095
      * */
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
 
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 6, 5, 4};
         int target = 8;
@@ -18,7 +20,7 @@ public class SearchInMountain {
         System.out.println("i = " + i);
 
 
-    }
+    }*/
 
     static int searchInMountain(int[] nums, int target) {
 
@@ -164,6 +166,11 @@ public class SearchInMountain {
             }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int sum = IntStream.range(1, 4).sum();
+        System.out.println(sum);
     }
 }
 
