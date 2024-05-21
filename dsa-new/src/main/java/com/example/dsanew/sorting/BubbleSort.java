@@ -61,7 +61,7 @@ public class BubbleSort {
         for (int i = 0; i < arr.length; i++) {
 
             //for each step, max element come at the last respective index as I have described above
-
+//                                5         - 0 -1 = 4
             for (int j = 1; j <= arr.length - i - 1/*or j < arr.length-1*/; j++) {
 
                 //swap if item is smaller than previous item
