@@ -28,7 +28,22 @@ public class CustomLinkedList {
     }
 
     /**
+     * Helper method to print the linked list
+     *
+     * @param head
+     */
+    public static void printList(Node head) {
+        Node current = head;
+        while (current != null) {
+            System.out.print(current.getValue() + " -> ");
+            current = current.getNext();
+        }
+        System.out.println("null");
+    }
+
+    /**
      * Method to insert element at very first index
+     *
      * @param value
      */
 
@@ -124,12 +139,31 @@ public class CustomLinkedList {
         }
     }
 
+    public void deleteGivenNode(Node node) {
+
+        if (node != null && node.next != null) {
+            node.next = node.next.next;
+            size--;
+        }
+    }
+
+    public int findMiddleValue() {
+
+        Node current = head;
+        if (current != null) {
+
+            //fixme : This is not proper , need to refactor
+            return size / 2;
+        }
+        return -1;
+    }
+
     /**
      * Structure of each internal Node
      */
     @Getter
     @Setter
-    private class Node {
+    static class Node {
         private int value;
         private Node next;  //next will point to new node , that's why the type is Node
 
