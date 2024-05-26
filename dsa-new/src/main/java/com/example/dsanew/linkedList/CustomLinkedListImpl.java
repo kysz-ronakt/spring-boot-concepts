@@ -18,5 +18,11 @@ public class CustomLinkedListImpl {
         linkedList.insertElementAtLast(13);
 
         linkedList.printLinkedList();
+
+        linkedList.deleteFirstElement();
+
+        System.out.println();
+        linkedList.printLinkedList();
+
     }
 }

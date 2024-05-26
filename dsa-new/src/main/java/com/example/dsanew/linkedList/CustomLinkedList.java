@@ -48,6 +48,7 @@ public class CustomLinkedList {
 
     /**
      * method to insert element at last
+     *
      * @param value
      */
     public void insertElementAtLast(int value) {
@@ -64,6 +65,17 @@ public class CustomLinkedList {
         }
 
         size++;
+    }
+
+    /**
+     * method to delete first element from list
+     */
+    public void deleteFirstElement() {
+
+        //if head is not null then move the head to next element , this will delete the first element
+        if (head != null) {
+            head = head.next;
+        }
     }
 
 
