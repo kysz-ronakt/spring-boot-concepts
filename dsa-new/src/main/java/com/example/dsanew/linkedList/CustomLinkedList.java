@@ -1,16 +1,19 @@
 package com.example.dsanew.linkedList;
 
-/*
- *   limitation of array :- you can't add more than defined elements
- *
- *  LinkedList
- *  - try to break these boxes down into separate boxes
- *  - stored in different memories
- * */
-
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * limitation of array :- you can't add more than defined elements
+ * LinkedList
+ * - try to break these boxes down into separate boxes
+ * - stored in different memories
+ */
+
+
+/**
+ * @author ronak-springboot-dev
+ */
 @Getter
 @Setter
 public class CustomLinkedList {
