@@ -27,6 +27,10 @@ public class CustomLinkedList {
         this.size = 0;
     }
 
+    /**
+     * Method to insert element at very first index
+     * @param value
+     */
 
     public void insertElementAtFirst(int value) {
         //create new node
@@ -78,7 +82,9 @@ public class CustomLinkedList {
         }
     }
 
-
+    /**
+     * Method to print Added elements in the list
+     */
     public void printLinkedList() {
         Node existingNode = head;
 
@@ -92,6 +98,9 @@ public class CustomLinkedList {
         }
     }
 
+    /**
+     * Structure of each internal Node
+     */
     @Getter
     @Setter
     private class Node {
