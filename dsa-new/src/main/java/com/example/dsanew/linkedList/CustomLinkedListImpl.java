@@ -8,9 +8,14 @@ public class CustomLinkedListImpl {
         System.out.println("size = " + size);
 
 
-        linkedList.add(12);
-        linkedList.add(21);
-        linkedList.add(35);
+        /*linkedList.insertElementAtFirst(12);
+        linkedList.insertElementAtFirst(21);
+        linkedList.insertElementAtFirst(35);*/
+
+        linkedList.insertElementAtLast(12);
+        linkedList.insertElementAtLast(21);
+        linkedList.insertElementAtLast(35);
+        linkedList.insertElementAtLast(13);
 
         linkedList.printLinkedList();
     }

@@ -28,7 +28,7 @@ public class CustomLinkedList {
     }
 
 
-    public void add(int value) {
+    public void insertElementAtFirst(int value) {
         //create new node
         Node node = new Node(value);
 
@@ -44,8 +44,26 @@ public class CustomLinkedList {
 
         //increase the size
         size++;
+    }
+
+    /**
+     * method to insert element at last
+     * @param value
+     */
+    public void insertElementAtLast(int value) {
+        //create new node
+        Node node = new Node(value);
 
 
+        if (head == null) {
+            head = node;
+            tail = node;
+        } else {
+            tail.next = node;
+            tail = node;
+        }
+
+        size++;
     }
 
 
