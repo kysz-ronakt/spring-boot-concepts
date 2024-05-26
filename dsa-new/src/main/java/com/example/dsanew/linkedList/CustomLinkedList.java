@@ -80,6 +80,9 @@ public class CustomLinkedList {
         if (head != null) {
             head = head.next;
         }
+
+        //decrease the size of list
+        size--;
     }
 
     /**
@@ -99,6 +102,29 @@ public class CustomLinkedList {
     }
 
     /**
+     * Method to remove last element from the Linkedlist
+     */
+    public void removeLastElement() {
+
+        if (head != null && head.next != null) {
+
+            Node second_last_element = head;
+
+            /*
+             * So if we have 1->3->4->null
+             * Whenever it gets to 3 it shall setNext to null so the new array will look like this 1->3->null
+             * */
+
+            while (second_last_element.next.next != null) {
+                second_last_element = second_last_element.next;
+            }
+
+            second_last_element.next = null;
+            size--;
+        }
+    }
+
+    /**
      * Structure of each internal Node
      */
     @Getter
@@ -114,6 +140,9 @@ public class CustomLinkedList {
 
         public Node(int value) {
             this.value = value;
+        }
+
+        public Node() {
         }
     }
 }

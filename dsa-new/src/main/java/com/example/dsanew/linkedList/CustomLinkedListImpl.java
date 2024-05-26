@@ -4,13 +4,10 @@ public class CustomLinkedListImpl {
 
     public static void main(String[] args) {
         CustomLinkedList linkedList = new CustomLinkedList();
-        int size = linkedList.getSize();
-        System.out.println("size = " + size);
-
 
         /*linkedList.insertElementAtFirst(12);
         linkedList.insertElementAtFirst(21);
-        linkedList.insertElementAtFirst(35);*/
+        linkedList.insertElementAtFirst(37);*/
 
         linkedList.insertElementAtLast(12);
         linkedList.insertElementAtLast(21);
@@ -21,8 +18,14 @@ public class CustomLinkedListImpl {
 
         linkedList.deleteFirstElement();
 
-        System.out.println();
+        System.out.println("After deleting :" + linkedList.getSize());
         linkedList.printLinkedList();
+
+        System.out.println();
+
+        linkedList.removeLastElement();
+        linkedList.printLinkedList();
+
 
     }
 }

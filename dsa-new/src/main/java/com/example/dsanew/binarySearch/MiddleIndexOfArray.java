@@ -7,7 +7,7 @@ public class MiddleIndexOfArray {
 
 //        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 //        int[] arr = {2, 3, -1, 8, 4};
-        int[] arr = {2, 5};
+        int[] arr = {2, 5,4,7, 8};
         int middleIndex = findMiddleIndex(arr);
         System.out.println("middleIndex = " + middleIndex);
     }
