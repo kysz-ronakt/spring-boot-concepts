@@ -4,6 +4,9 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+/**
+ * @author ronak-spring-dev
+ */
 @Configuration
 public class DAOConfig {
 
