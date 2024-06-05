@@ -1,27 +1,19 @@
--- CREATE TABLE ChessGame
--- (
---     id          BIGSERIAL PRIMARY KEY,
---     playerWhite VARCHAR(255) NOT NULL,
---     playerBlack VARCHAR(255) NOT NULL
--- );
---
--- CREATE TABLE ChessMove
--- (
---     id          BIGSERIAL PRIMARY KEY,
---     chessGameId BIGINT       NOT NULL,
---     move        VARCHAR(255) NOT NULL,
---     moveNumber  INT          NOT NULL,
---     CONSTRAINT fk_chessgame
---         FOREIGN KEY (chessGameId)
---             REFERENCES ChessGame (id)
--- );
 
-create table Post(
-    int id auto_increament primary key ,
+
+create table if not exists post(
+    id serial primary key,
     version int,
-    title varchar not null ,
-    content text not null ,
-    published_on timestamp not null,
-    updated_on timestamp not null
+    title varchar(255) not null,
+    content text not null,
+    published_on TIMESTAMP not null,
+    foreign key (author) references Author(id)
 );
 
+
+create table if not exists author(
+    id serial primary key,
+    first_name varchar(255) not null,
+    last_name varchar(255) not null,
+    email varchar(255) not null,
+    user_name varchar(255) not null
+);

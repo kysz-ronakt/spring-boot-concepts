@@ -1,17 +1,32 @@
 package com.spring.jdbc.springdata.jdbc;
 
-import com.spring.jdbc.springdata.jdbc.entity.Post;
-import com.spring.jdbc.springdata.jdbc.repository.PostRepository;
-import org.apache.catalina.core.ApplicationContext;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.boot.autoconfigure.sql.init.SqlInitializationAutoConfiguration;
+import org.springframework.context.ApplicationContext;
 
-@SpringBootApplication
+@SpringBootApplication(exclude={SqlInitializationAutoConfiguration.class})
 public class SpringDataJdbcApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(SpringDataJdbcApplication.class, args);
+
+    private final ApplicationContext applicationContext;
+
+    public SpringDataJdbcApplication(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
     }
+
+    public static void main(String[] args) {
+      SpringApplication.run(SpringDataJdbcApplication.class, args);
+
+
+    }
+
+    CommandLineRunner commandLineRunner(){
+        for (var bean : applicationContext.getBeanDefinitionNames()){
+            System.out.println("bean = " + bean);
+        }
+        return null;
+    }
+
 }

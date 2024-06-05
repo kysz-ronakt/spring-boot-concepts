@@ -1,10 +1,15 @@
 package com.spring.jdbc.springdata.jdbc.entity;
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
 public class Author {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String firstName;
     private String lastName;
@@ -61,4 +66,5 @@ public class Author {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
 }

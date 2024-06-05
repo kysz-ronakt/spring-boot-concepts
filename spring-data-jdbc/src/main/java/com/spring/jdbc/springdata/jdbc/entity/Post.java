@@ -1,22 +1,26 @@
 package com.spring.jdbc.springdata.jdbc.entity;
 
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import org.springframework.data.jdbc.core.mapping.AggregateReference;
 
 import java.time.LocalDateTime;
 
+@Entity
 public class Post {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private int version;
     private String title;
     private String content;
     private LocalDateTime publishedOn;
     private LocalDateTime updatedOn;
-
     //Author
-    private AggregateReference<Author, Integer> author;
+    //    private AggregateReference<Author, Integer> author;
 
     //Comments
 
@@ -27,6 +31,12 @@ public class Post {
         this.updatedOn = null;
         this.version = version;
     }
+
+    public Post() {
+
+    }
+
+
 
     public Integer getId() {
         return id;
@@ -75,4 +85,5 @@ public class Post {
     public void setVersion(int version) {
         this.version = version;
     }
+
 }
